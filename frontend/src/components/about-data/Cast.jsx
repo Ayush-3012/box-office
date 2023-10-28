@@ -2,8 +2,8 @@
 const Cast = ({ cast }) => {
   return (
     <div>
-      <h2 className="font-semibold text-2xl">Cast</h2>
-      <div className="flex flex-wrap mx-4">
+      <h2 className="font-semibold text-2xl text-emerald-300">Cast</h2>
+      <div className="flex flex-wrap mx-4 max-md:flex-col">
         {cast?.map(({ person, character, voice }) => (
           <div
             key={person.id}
@@ -11,12 +11,16 @@ const Cast = ({ cast }) => {
           >
             <div className="w-20 h-20 min-w-20 overflow-hidden rounded-full">
               <img
-                src={person.image ? person.image.medium : ""}
+                src={
+                  person.image
+                    ? person.image.medium
+                    : "https://demofree.sirv.com/nope-not-here.jpg"
+                }
                 className="object-cover w-full h-full"
               />
             </div>
 
-            <div className="text-lg font-medium">
+            <div className="text-lg font-medium text-fuchsia-300">
               {person.name} | {character.name} {voice && "| Voiceover"}
             </div>
           </div>

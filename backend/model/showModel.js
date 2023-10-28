@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const showSchema = {
   id: {
-    type: String,
+    type: Number,
     required: true,
   },
   show: {

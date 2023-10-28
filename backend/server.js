@@ -15,7 +15,7 @@ app.use(express.json());
 
 mongoose.connect(uri);
 
-// app.use("/", showRouter);
+app.use("/", showRouter);
 
 app.listen(port, () => {
   console.log(`Server is listening to port ${port}`);

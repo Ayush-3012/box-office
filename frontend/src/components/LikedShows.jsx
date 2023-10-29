@@ -1,40 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import ShowCard from "./show-card/ShowCard";
 import Body from "./MainLayout/Body";
-import Fetch from "./MainLayout/Fetch";
-
-const API = import.meta.env.VITE_API_URL;
 
 const Home = () => {
-  const [shows, setShows] = useState([]);
-  const [query, setQuery] = useState("");
+  const [myShows, setMyShows] = useState([]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  useEffect(() => {
+    updateDb();
+  }, []);
+
+  const updateDb = () => {
     axios
-      .get(API + `${query}`)
+      .get("https://box-office-backend.vercel.app/")
       .then((res) => {
-        setShows(res.data);
+        setMyShows(res.data);
       })
-      .catch((err) => console.log(err));
-
-    setQuery("");
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
     <div className="px-4 m-4 rounded-xl overflow-y-scroll h-[95%] bg-slate-700">
       <div className="flex justify-center items-center flex-col gap-4 p-2">
         <Body />
-        <Fetch handleSubmit={handleSubmit} query={query} setQuery={setQuery} />
       </div>
       <div className="flex mx-2">
         <h1 className="text-4xl underline px-4 tracking-wider py-2 text-white font-serif">
-          Shows
+          Liked Shows
         </h1>
       </div>
       <div className="mx-6">
-        <ShowCard shows={shows} />
+        {updateDb()}
+        <ShowCard shows={myShows} />
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ const Home = () => {
 
   const updateDb = () => {
     axios
-      .get("http://localhost:5000/")
+      .get("https://box-office-backend.vercel.app/")
       .then((res) => {
         setMyShows(res.data);
       })

@@ -4,19 +4,19 @@ Tech Stack -> MongoDb, Express, React, Node, API
 
 The project is about fetching Shows and movie details using API and displaying different types of content. Users can make their playlists by placing their favorite shows/movies into the database.
 ## API Reference
-api = `https://api.tvmaze.com/search/shows?q=`
+API = `https://api.tvmaze.com/search/shows?q=`
 
 api_id = `https://api.tvmaze.com/shows/`
 
 #### Get all items
 
-```http
-  GET /api/items
+```HTTP
+  GET /API/items
 ```
 
 #### Get item
 
-```http
+```HTTP
   GET /api_id/${id}
 ```
 
@@ -43,14 +43,14 @@ I'm a MERN Stack developer and a recent B.Sc. (Hons.) Computer Science graduate 
 
 I have honed my abilities in various programming languages, including C++, JavaScript, Python, and Web tech. Additionally, I have explored exciting fields such as Machine Learning and Data Science, further enhancing my technical expertise.
 
-With a commendable 8.8 CGPA, I am now actively seeking opportunities for internships and jobs where I can apply my knowledge and passion for programming. My goal is to secure a challenging position that allows me to leverage my diverse skill set and contribute to meaningful projects. 
+With a commendable 8.8 CGPA, I am now actively seeking internships and jobs where I can apply my knowledge and passion for programming. I aim to secure a challenging position that allows me to leverage my diverse skill set and contribute to meaningful projects. 
 
-As a lifelong learner, I am committed to continuous growth and staying at the forefront of the ever-evolving tech industry. I believe that embracing new challenges and learning emerging technologies will empower me to thrive in any future endeavors.
+As a lifelong learner, I am committed to continuous growth and staying at the forefront of the ever-evolving tech industry. Embracing new challenges and learning emerging technologies will empower me to thrive in any future endeavors.
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://portfolio-ayush-3012.vercel.app/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ayush-kumar-6137651b4/)
 
 
 ## 🛠 Skills
-C++, JavaScript, Python, HTML, CSS, MongoDb, ExpressJs, ReactJs, NodeJs, Git, Github, Machine Learning, Data Analytics, SQL, Numpy, Pandas, Matplotlib, Scikit Learn.
+C++, JavaScript, Python, HTML, CSS, MongoDB, ExpressJs, ReactJs, NodeJs, Git, Github, Machine Learning, Data Analytics, SQL, Numpy, Pandas, Matplotlib, Scikit Learn.
 

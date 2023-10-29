@@ -30,7 +30,7 @@ const ShowSingleCard = ({ id, show, index }) => {
   };
 
   return (
-    <div className="bg-slate-800 font-serif rounded-2xl m-2 hover:shadow-[1px_1px_20px_rgb(52,211,153)] hover:-translate-y-3 transition ease-in-out duration-300">
+    <div className="bg-slate-800 font-serif rounded-2xl hover:shadow-[1px_1px_20px_rgb(52,211,153)] hover:-translate-y-3 transition ease-in-out duration-300">
       <h4 className="text-white text-2xl text-center">{index + 1}.</h4>
       <div className="flex justify-center mb-2">
         <img

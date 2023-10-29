@@ -70,7 +70,7 @@ const Home = () => {
             placeholder="Search For Shows..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="focus:shadow-md focus:shadow-emerald-400 w-64 rounded-lg outline-none px-3 py-2"
+            className="focus:shadow-md focus:shadow-emerald-400 w-56 rounded-lg outline-none px-3 py-2"
           />
           <button
             type="submt"

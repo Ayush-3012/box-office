@@ -32,16 +32,24 @@ const About = () => {
   const { seasons, cast } = show._embedded ? show._embedded : "";
 
   return (
-    <div className="px-4 m-4 rounded-xl overflow-y-scroll h-[95%] bg-slate-700">
-      <div className="flex flex-col my-10 bg-slate-800 rounded-xl w-[80%] p-4 mx-auto relative">
-        <div className="flex justify-evenly items-center max-md:flex-col gap-5">
+    <div className="px-4 m-4 rounded-xl overflow-y-scroll h-[95%] bg-slate-700 max-md:px-0 max-md:m-0">
+      <div className="flex flex-col my-10 bg-slate-800 rounded-xl w-[80%] p-4 mx-auto relative max-md:w-[90%]">
+        <div className="flex justify-evenly items-center gap-5 max-md:flex-col max-md:gap-2">
           <div className="px-10 py-5 flex-2">
             <img
               src={imgUrl}
               className="rounded-ss-xl rounded-ee-xl shadow-[1px_1px_20px_rgb(256,256,256)]"
             />
           </div>
-          <MainAbout name={show.name} type={show.type} rating={rating} language={show.language} summary={show.summary} genres={show.genres} officialSite={show.officialSite} />
+          <MainAbout
+            name={show.name}
+            type={show.type}
+            rating={rating}
+            language={show.language}
+            summary={show.summary}
+            genres={show.genres}
+            officialSite={show.officialSite}
+          />
         </div>
         <hr />
         <Details status={show.status} premiered={show.premiered} />

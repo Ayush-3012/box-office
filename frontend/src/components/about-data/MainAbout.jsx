@@ -14,11 +14,11 @@ const MainAbout = ({
 }) => {
   return (
     <>
-      <div className="flex gap-4 flex-col px-10 py-5 flex-1">
-        <div className="flex gap-x-2 items-center max-md:flex-col">
-          <div className="flex gap-1 px-2 items-center">
+      <div className="flex gap-4 flex-col p-5 flex-1">
+        <div className="flex items-center justify-evenly max-sm:flex-col">
+          <div className="flex gap-2 px-2 items-center">
             <PiFilmSlateBold className="text-emerald-400 text-4xl" />
-            <h2 className="my-1 pr-4 text-4xl text-fuchsia-400 font-serif border-r-2 max-md:border-r-0 border-white">
+            <h2 className="my-1 pr-4 text-4xl text-fuchsia-400 font-serif ">
               {name}
             </h2>
           </div>
@@ -27,8 +27,8 @@ const MainAbout = ({
             <h2 className="text-2xl text-emerald-400">{rating}</h2>
           </div>
         </div>
-        <div className="flex items-center gap-2 max-md:flex-col">
-          <div className="flex items-center justify-center pr-4 gap-2 border-r-2 max-md:border-r-0 border-white">
+        <div className="flex items-center justify-evenly max-sm:flex-col">
+          <div className="flex items-center justify-center pr-4 gap-2 ">
             <MdTypeSpecimen className="text-emerald-400 text-3xl" />
             <h2 className="text-xl text-fuchsia-300">{type}</h2>
           </div>
@@ -42,7 +42,7 @@ const MainAbout = ({
             className="font-seif text-xl text-white"
             dangerouslySetInnerHTML={{ __html: summary }}
           />
-          <span className="text-xl text-emerald-300 flex flex-wrap">
+          <span className="text-xl text-emerald-300 flex flex-wrap gap-1">
             Genres:
             {genres?.map((genre) => (
               <span

@@ -7,7 +7,7 @@ const Cast = ({ cast }) => {
         {cast?.map(({ person, character, voice }) => (
           <div
             key={person.id}
-            className="flex-[1_0_50%] flex items-center my-2 gap-5"
+            className="flex-[1_0_50%] flex items-center my-2 gap-5 max-sm:flex-col"
           >
             <div className="w-20 h-20 min-w-20 overflow-hidden rounded-full">
               <img

@@ -6,19 +6,7 @@ The project is about fetching Shows and movie details using API and displaying d
 ## API Reference
 API = `https://api.tvmaze.com/search/shows?q=`
 
-api_id = `https://api.tvmaze.com/shows/`
-
-#### Get all items
-
-```HTTP
-  GET /API/items
-```
-
-#### Get item
-
-```HTTP
-  GET /api_id/${id}
-```
+API_ID = `https://api.tvmaze.com/shows/`
 
 
 ## Authors
@@ -36,7 +24,10 @@ api_id = `https://api.tvmaze.com/shows/`
 
 ## Demo
 
-https://drive.google.com/file/d/1U5N2zALMfrA8cr1HMTbM5Q-5JOrCTn86/view?usp=sharing
+https://github.com/Ayush-3012/box-office/assets/100586445/5bf65b30-c9c9-4be6-954f-98090665e4a6
+
+
+
 
 ## 🚀 About Me
 I'm a MERN Stack developer and a recent B.Sc. (Hons.) Computer Science graduate from Dyal Singh College, Delhi University, 

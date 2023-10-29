@@ -3,7 +3,7 @@ import axios from "axios";
 import ShowCard from "./show-card/ShowCard";
 import Body from "./MainLayout/Body";
 
-const Home = () => {
+const LikedShows = () => {
   const [myShows, setMyShows] = useState([]);
 
   useEffect(() => {
@@ -39,4 +39,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default LikedShows;

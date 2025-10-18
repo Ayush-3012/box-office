@@ -13,9 +13,11 @@ const uri = process.env.MONGO_URI;
 app.use(
   cors({
     origin: [
-      "http://localhost:5173/",
-      "https://box-office-ayush-3012.vercel.app/",
+      "http://localhost:5173",
+      "https://box-office-ayush-3012.vercel.app",
     ],
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 app.use(express.json());

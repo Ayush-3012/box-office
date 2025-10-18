@@ -3,14 +3,14 @@ import { Show } from "../model/showModel.js";
 
 const showRouter = express.Router();
 
-// ROUTE FOR GETTING ALL BOOKS
+// ROUTE FOR GETTING ALL SHOWS
 showRouter.get("/", async (req, res) => {
   Show.find()
     .then((shows) => res.send(shows))
     .catch((err) => res.status(400).json("Error" + err));
 });
 
-// ROUTE TO ADD BOOK TO FAVORITE
+// ROUTE TO ADD SHOWS TO FAVORITE
 showRouter.post("/liked/shows", (req, res) => {
   Show.findOne({ id: req.body.id }).then((found) => {
     if (!found) {

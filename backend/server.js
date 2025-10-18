@@ -10,10 +10,27 @@ const app = express();
 const port = process.env.PORT;
 const uri = process.env.MONGO_URI;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173/",
+      "https://box-office-ayush-3012.vercel.app/",
+    ],
+  })
+);
 app.use(express.json());
 
-mongoose.connect(uri);
+mongoose
+  .connect(uri)
+  .then((res) =>
+    console.log(
+      "Mongoose connected to : ",
+      res.connection.name,
+      " HOST !!! ",
+      res.connection.host
+    )
+  )
+  .catch((err) => console.log(err));
 
 app.use("/", showRouter);
 

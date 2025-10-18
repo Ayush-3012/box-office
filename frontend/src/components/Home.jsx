@@ -9,15 +9,19 @@ const API = import.meta.env.VITE_API_URL;
 const Home = () => {
   const [shows, setShows] = useState([]);
   const [query, setQuery] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     axios
       .get(API + `${query}`)
       .then((res) => {
         setShows(res.data);
+        setLoading(false);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
+      .finally(() => setLoading(false));
 
     setQuery("");
   };
@@ -34,7 +38,11 @@ const Home = () => {
         </h1>
       </div>
       <div className="mx-6">
-        <ShowCard shows={shows} />
+        {loading ? (
+          <h1 className="text-4xl text-center text-white">Loading...</h1>
+        ) : (
+          <ShowCard shows={shows} />
+        )}
       </div>
     </div>
   );

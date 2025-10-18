@@ -18,7 +18,7 @@ const ShowSingleCard = ({ id, show, index }) => {
       show,
     };
     axios
-      .post("https://box-office-backend.vercel.app/liked/shows", data)
+      .post(`${import.meta.env.VITE_URI}/liked/shows`, data)
       .then((res) => {
         const { message } = res.data;
         enqueueSnackbar(message, { variant: "success" });

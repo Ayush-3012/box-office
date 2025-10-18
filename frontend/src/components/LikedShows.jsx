@@ -10,9 +10,9 @@ const LikedShows = () => {
     updateDb();
   }, []);
 
-  const updateDb = () => {
-    axios
-      .get("https://box-office-backend.vercel.app/")
+  const updateDb = async () => {
+    await axios
+      .get(import.meta.env.VITE_URI)
       .then((res) => {
         setMyShows(res.data);
       })

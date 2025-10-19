@@ -10,8 +10,8 @@ const LikedShows = () => {
     updateDb();
   }, []);
 
-  const updateDb = async () => {
-    await axios
+  const updateDb = () => {
+    axios
       .get(import.meta.env.VITE_URI)
       .then((res) => {
         setMyShows(res.data);

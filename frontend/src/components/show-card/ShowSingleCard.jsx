@@ -12,12 +12,12 @@ const ShowSingleCard = ({ id, show, index }) => {
     ? show.image.medium
     : "https://demofree.sirv.com/nope-not-here.jpg";
 
-  const updateFavorite = () => {
+  const updateFavorite = async () => {
     const data = {
       id: id,
       show,
     };
-    axios
+    await axios
       .post(`${import.meta.env.VITE_URI}/liked/shows`, data)
       .then((res) => {
         const { message } = res.data;
